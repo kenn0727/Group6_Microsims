@@ -3,7 +3,10 @@
 Compiled by UMN Students.
 Micro simulations created by generative AI tools.
 
-### Procedure for adding a simulation:
+---
+
+## Procedure for adding a simulation:
+
 ```
 Create the following directory, and the internal files:
 
@@ -18,9 +21,12 @@ Create the following directory, and the internal files:
 ```
 The python script will update the docs/index.md, adding the MySim to the gallery (index.md) page.
 
-### index.md format:
 
-Please include a generation prompt in your index.md.  If multiple variations of a prompt were used, paraphrase into one.
+---
+
+## Requested index.md format:
+
+Please include a generation prompt in your index.md.  If multiple variations of a prompt were used, paraphrase into one. While this format is subject to change, the standarization of it eases the use automation to implement later changes.
  
 ````
 ## Prompt
@@ -29,4 +35,9 @@ Please include a generation prompt in your index.md.  If multiple variations of 
 Generation prompt text.
 ```
 ````
-While this format is subject to change, the standarization of it eases the use automation to implement later changes.
+
+---
+
+## Building the site:
+
+Refer to https://dmccreary.github.io/microsims/how-we-built-this-site/

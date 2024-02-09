@@ -1,14 +1,14 @@
 site_name: Micro Simulations for Education
 site_description: 'Resources for teaching classes with Micro Simulators.'
 site_author: 'UMN Students of Group 6'
-repo_name: 'GitHub Repo'
-#site_url: 'https://group6.github.io/group6site'
-repo_url: 'https://github.com/kenn0727/group6site'
+repo_name: 'Group6_Microsims'
+site_url: 'https://kenn0727.github.io/Group6_Microsims'
+repo_url: 'https://github.com/kenn0727/Group6_Microsims'
 
 nav:
   - Gallery: index.md
   - Simulations:
-    - Default: index.md
+    - Default: sims/index.md
     - Timer: sims/555-timer/index.md
   - License: license.md
 

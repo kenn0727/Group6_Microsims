@@ -5,6 +5,7 @@ def process_sim(directory, thumbnails_dir, gallery_lines):
     simID = os.path.basename(directory)
     title = simID  # Default title is the simID
     index_file = os.path.join(directory, 'index.md')
+    if title == "thumbnails": return
 
     # Check if index.md exists and extract the title
     if os.path.exists(index_file):
@@ -17,7 +18,7 @@ def process_sim(directory, thumbnails_dir, gallery_lines):
     # Find the first image (simID.png)
     image_file = os.path.join(directory, f'{simID}.png')
     if not os.path.exists(image_file):
-        print(f"No image found for {simID}, skipping. To fix, create image /doc//sims/thumbnails/{simID}.png")
+        print(f"No image found for {simID}, skipping. To fix, create image /doc/sims/thumbnails/{simID}.png")
         return
 
     # Create a thumbnail
@@ -27,7 +28,8 @@ def process_sim(directory, thumbnails_dir, gallery_lines):
         img.save(thumbnail_path)
 
     # Add entry to the gallery lines
-    gallery_lines.append(f"[{title}](../{simID}) ![thumbnail](./sims/thumbnails/{simID}.png)")
+    gallery_lines.append(f"[{title}]( ./sims/{simID}/index.md) ![thumbnail](./sims/thumbnails/{simID}.png)")
+    print(f" + Added {simID} to Gallery.")
 
 # currently in src, hence ../docs
 gall_dir = '../docs/sims/'
@@ -55,3 +57,6 @@ if gallery_content:
     gallery_content =  title + header_row + separator_row + gallery_content
 
 (open("../docs/index.md", "w")).write(gallery_content)
+gallery_content = gallery_content.replace("/sims","")
+(open("../docs/sims/index.md", "w")).write(gallery_content)
+
