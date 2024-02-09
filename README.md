@@ -41,4 +41,5 @@ Generation prompt text.
 ## Building the site:
 
 Refer to https://dmccreary.github.io/microsims/how-we-built-this-site/
+
 Visit the site: https://kenn0727.github.io/Group6_Microsims/
