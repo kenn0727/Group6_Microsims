@@ -1,0 +1,37 @@
+site_name: Micro Simulations for Education
+site_description: 'Resources for teaching classes with Micro Simulators.'
+site_author: 'UMN Students of Group 6'
+repo_name: 'GitHub Repo'
+#site_url: 'https://group6.github.io/group6site'
+repo_url: 'https://github.com/kenn0727/group6site'
+
+nav:
+  - Gallery: index.md
+  - Simulations:
+    - Default: index.md
+    - Timer: sims/555-timer/index.md
+  - License: license.md
+
+edit_uri: 'blob/master/docs'
+
+theme:
+  name: material
+  include_sidebar: true
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    - navigation.footer
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      linenums: true
