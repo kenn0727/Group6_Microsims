@@ -7,7 +7,7 @@
 
 Credit: Seungho
 
-[Run the Linear Algebra sim](./index.html){ .md-button .md-button--primary }
+[Run the Linear Algebra sim](./linear.html){ .md-button .md-button--primary }
 
 [Edit the Linear Algebra sim](https://editor.p5js.org/durdru99/sketches/qqcPtvolz)
 
