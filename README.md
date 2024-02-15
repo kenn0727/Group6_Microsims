@@ -4,7 +4,6 @@ Compiled by UMN Students.
 Micro simulations created by generative AI tools.
 
 ---
-
 ## Procedure for adding a simulation:
 
 ```
@@ -24,8 +23,18 @@ and
 ```
  python make_main_gallery.py
  ```
-The python script will update the docs/index.md, adding the MySim to the gallery (index.md) page.
+The Python script will update the docs/index.md, adding the MySim to the gallery (index.md) page.
+When you finish add your simulation. Check the preview website using a built-in dev-server:
+```
+ mkdocs serve
+ ```
+ Once, everything works okay and is ready to deploy. go to the master branch and type this:
+```
+ mkdocs gh-deploy
+ ```
+ Done!!
 
+ The more detail information is here: https://www.mkdocs.org/getting-started/#getting-started-with-mkdocs
 ---
 
 ## Requested index.md format:
@@ -43,7 +52,7 @@ Generation prompt text.
 ---
 ## Things to know
 1. your simulation folder name has to be same as your .png file name.  such as Mysim.png in MySim folder.
-2. If you see any these two similar error, follow this. 
+2. If you see any of these two similar errors, follow this. 
 
 Theme error:
 ```
