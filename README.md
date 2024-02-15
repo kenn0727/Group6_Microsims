@@ -16,11 +16,15 @@ Create the following directory, and the internal files:
  +              .../index.md
  
  + /docs/sims/thumbnails/MySim.png
-
- cd src && python make_main_gallery.py
 ```
+```
+ cd src
+```
+and
+```
+ python make_main_gallery.py
+ ```
 The python script will update the docs/index.md, adding the MySim to the gallery (index.md) page.
-
 
 ---
 
@@ -37,9 +41,38 @@ Generation prompt text.
 ````
 
 ---
+## Things to know
+1. your simulation folder name has to be same as your .png file name.  such as Mysim.png in MySim folder.
+2. If you see any these two similar error, follow this. 
+
+Theme error:
+```
+ERROR   -  Config value: 'theme'. Error: Unrecognised theme 'material'. The available installed themesare
+```
+just install the mkdocs material using pip
+```
+pip install mkdocs-material
+```
+
+Extension error:
+```
+ERROR   -  Config value: 'markdown_extensions'. Error: Failed loading extension "pymdownx.tabbed".`
+```
+just install the extensions using pip
+```
+pip install pymdown-extensions --force
+```
+
+
+
 
 ## Building the site:
 
 Refer to https://dmccreary.github.io/microsims/how-we-built-this-site/
 
 Visit the site: https://kenn0727.github.io/Group6_Microsims/
+
+## Reference sources
+Theme error: https://squidfunk.github.io/mkdocs-material/getting-started/#configuration
+
+Extension error: https://stackoverflow.com/questions/69927989/using-mkdocs-failed-loading-extension-pymdownx-despite-it-being-installed
