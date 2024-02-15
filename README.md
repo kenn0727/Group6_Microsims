@@ -35,6 +35,8 @@ When you finish add your simulation. Check the preview website using a built-in 
  Done!!
 
  The more detail information is here: https://www.mkdocs.org/getting-started/#getting-started-with-mkdocs
+
+ 
 ---
 
 ## Requested index.md format:
