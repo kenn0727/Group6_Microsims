@@ -14,7 +14,7 @@ Create p5.js interactive script that allows the user to view and alter a mobius 
 Graph the coeffiecients as draggable vectors, and display a point domain of configurable scale and density.
 Create a user drawable side canvas, map the drawn points back through the transform and displays it alongside the current point map visualization.
 ```
-* [ChatGPT conversation history](https://chat.openai.com/c/487ee060-8b1d-4ccb-8e91-f2385dee1767)
+* [ChatGPT conversation history](https://chat.openai.com/share/10214b86-450e-4dad-80b5-a5c318652146)
 
 ## References
 
