@@ -3,6 +3,7 @@
 Compiled by UMN Students.
 Micro simulations created by generative AI tools.
 Visit the site at https://kenn0727.github.io/Group6_Microsims/
+
 ---
 ## Procedure for adding a simulation:
 
