@@ -9,8 +9,8 @@ nav:
   - Gallery: index.md
   - Simulations:
     - Default: sims/index.md
-    - Timer: sims/555-timer/index.md
     - Vector Sim: sims/Linear-Algebra-Sim/index.md
+    - Mobius Transform: sims/Mobius-Transform/index.md
   - License: license.md
 
 edit_uri: 'blob/master/docs'

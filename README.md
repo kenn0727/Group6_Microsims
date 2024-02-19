@@ -2,7 +2,7 @@
 
 Compiled by UMN Students.
 Micro simulations created by generative AI tools.
-
+Visit the site at https://kenn0727.github.io/Group6_Microsims/
 ---
 ## Procedure for adding a simulation:
 
@@ -74,14 +74,6 @@ just install the extensions using pip
 pip install pymdown-extensions --force
 ```
 
-
-
-
-## Building the site:
-
-Refer to https://dmccreary.github.io/microsims/how-we-built-this-site/
-
-Visit the site: https://kenn0727.github.io/Group6_Microsims/
 
 ## Reference sources
 Theme error: https://squidfunk.github.io/mkdocs-material/getting-started/#configuration
