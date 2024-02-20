@@ -2,10 +2,20 @@
 
 <figure markdown>
    ![](./mobius-transform.png){ width="400" }
-   <figcaption>Mobius Transform MicroSim</figcaption>
 </figure>
 
-[Run the Mobius Transform MicroSim](./mobius-transform.html){ .md-button .md-button--primary }
+<form action="mobius-transform.html" style="text-align:center;">
+<button style="align-content: center;" class="md-button md-button--primary">
+Run the Mobius Transform MicroSim
+</button>
+</form>
+
+
+## References
+
+* [Mobius Transform Wikipedia](https://en.wikipedia.org/wiki/M%C3%B6bius_transformation)
+* [Smith Chart and the Mobius Transform](https://cds.cern.ch/record/1417989/files/p95.pdf)
+* [Desmos Implementation](https://www.desmos.com/calculator/61h3sc0err)
 
 ## Prompt
 
@@ -16,8 +26,3 @@ Create a user drawable side canvas, map the drawn points back through the transf
 ```
 * [ChatGPT conversation history](https://chat.openai.com/share/10214b86-450e-4dad-80b5-a5c318652146)
 
-## References
-
-* [Mobius Transform Wikipedia](https://en.wikipedia.org/wiki/M%C3%B6bius_transformation)
-* [Smith Chart and the Mobius Transform](https://cds.cern.ch/record/1417989/files/p95.pdf)
-* [Desmos Implementation](https://www.desmos.com/calculator/dukutxtsev)

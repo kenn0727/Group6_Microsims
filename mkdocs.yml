@@ -1,16 +1,16 @@
 site_name: Micro Simulations for Education
 site_description: 'Resources for teaching classes with Micro Simulators.'
-site_author: 'UMN Students of Group 6'
-repo_name: 'Group6_Microsims'
-site_url: 'https://kenn0727.github.io/Group6_Microsims'
-repo_url: 'https://github.com/kenn0727/Group6_Microsims'
+site_author: 'UMN Students'
+repo_name: 'ee-microsims'
+site_url: 'https://kenn0727.github.io/ee-microsims'
+repo_url: 'https://github.com/kenn0727/ee-microsims'
 
 nav:
   - Gallery: index.md
   - Simulations:
     - Default: sims/index.md
     - Vector Sim: sims/Linear-Algebra-Sim/index.md
-    - Mobius Transform: sims/Mobius-Transform/index.md
+    - Mobius Transform: sims/mobius-transform/index.md
   - License: license.md
 
 edit_uri: 'blob/master/docs'

@@ -2,7 +2,7 @@
 
 Compiled by UMN Students.
 Micro simulations created by generative AI tools.
-Visit the site at https://kenn0727.github.io/Group6_Microsims/
+Visit the site at https://kenn0727.github.io/ee-microsims/
 
 ---
 ## Procedure for adding a simulation:
@@ -13,9 +13,10 @@ Create the following directory, and the internal files:
  + /docs/sims/MySim
  +              .../MySim.html
  +              .../MySim.js
+ +              .../MySim.css (optional)
  +              .../index.md
+ +              .../MySim.png
  
- + /docs/sims/thumbnails/MySim.png
 ```
 ```
  cd src
