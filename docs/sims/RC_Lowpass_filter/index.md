@@ -10,7 +10,7 @@ Creates a Bode Plot showing phase and magnitude for any inputted RC filter combi
 # RC Lowpass Filter
 
 <figure markdown>
-   ![](./RC_Lowpass_filter.png){ width="400" }
+   <img src="/RC_Lowpass_filter.png" style:{ width="400" }
 </figure>
 
 <form action="RCindex.html" style="text-align:center;">
