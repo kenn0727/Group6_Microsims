@@ -7,13 +7,16 @@ Creates a Bode Plot showing phase and magnitude for any inputted RC filter combi
 *click Generate Bode Plot
 *plot will be shown below
 
-# RC Lowpass Filter
-
-<figure markdown>
-   <img src="https://github.com/kenn0727/ee-microsims/blob/master/docs/sims/RC_Lowpass_filter/RC_Lowpass_filter.png" style:{ width="400" }
-</figure>
-
-<form action="/RCindex.html" style="text-align:center;" method=POST>
-   <button type="button" style="align-content: center;">
-      Run the RC Low Pass Filter MicroSim </button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+   </head>
+   <body>
+      <img src="https://github.com/kenn0727/ee-microsims/blob/master/docs/sims/RC_Lowpass_filter/RC_Lowpass_filter.png" style:{ width="400" }>      
+      <form action="/RCindex.html" style="text-align:center;" method=POST>
+         <button type="button" style="align-content: center;">
+            Run the RC Low Pass Filter MicroSim </button>
+      </form>
+   </body>
+</html>
