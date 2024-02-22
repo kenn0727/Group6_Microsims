@@ -2,6 +2,7 @@
 
 <figure markdown>
    ![](./analogmod.png){ width="400" }
+   <figcaption>analog mod Sim</figcaption>
 </figure>
 
 <form action="analog-mod.html" style="text-align:center;">
