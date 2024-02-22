@@ -7,7 +7,7 @@ Creates a Bode Plot showing phase and magnitude for any inputted RC filter combi
 *click Generate Bode Plot
 *plot will be shown below
 
-# Mobius Transform
+# RC Lowpass Filter
 
 <figure markdown>
    ![](./RC_Lowpass_filter.png){ width="400" }
