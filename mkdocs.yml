@@ -9,8 +9,13 @@ nav:
   - Gallery: index.md
   - Simulations:
     - Default: sims/index.md
-    - Vector Sim: sims/Linear-Algebra-Sim/index.md
+    - Vector Sim: sims/linear-algebra-sim/index.md
     - Mobius Transform: sims/mobius-transform/index.md
+    - Frequency Detection: sims/frequency-detection/index.md
+    - LC Oscillator: sims/lc-oscillator/index.md
+    - RC Lowpass Filter: sims/rc-lowpass-filter/index.md
+    - Analog Mod: sims/analog-mod/index.md
+    - Mosfet Biasing: sims/mosfet-biasing/index.md
   - License: license.md
 
 edit_uri: 'blob/master/docs'

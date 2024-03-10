@@ -1,8 +1,8 @@
-# analog mod
+# Analog Modulation
 
 <figure markdown>
-   ![](./analogmod.png){ width="400" }
-   <figcaption>analog mod Sim</figcaption>
+   ![](./analog-mod.png){ width="400" }
+   <figcaption>Analog Modulation Sim</figcaption>
 </figure>
 
 <form action="analog-mod.html" style="text-align:center;">
