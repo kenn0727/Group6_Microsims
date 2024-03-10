@@ -2,37 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kenn0727.github.io/ee-microsims/</loc>
-         <lastmod>2024-02-22</lastmod>
+         <lastmod>2024-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kenn0727.github.io/ee-microsims/license/</loc>
-         <lastmod>2024-02-22</lastmod>
+         <lastmod>2024-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kenn0727.github.io/ee-microsims/sims/</loc>
-         <lastmod>2024-02-22</lastmod>
+         <lastmod>2024-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kenn0727.github.io/ee-microsims/sims/Linear-Algebra-Sim/</loc>
-         <lastmod>2024-02-22</lastmod>
+         <loc>https://kenn0727.github.io/ee-microsims/sims/analog-mod/</loc>
+         <lastmod>2024-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kenn0727.github.io/ee-microsims/sims/MOSFET-Biasing/</loc>
-         <lastmod>2024-02-22</lastmod>
+         <loc>https://kenn0727.github.io/ee-microsims/sims/frequency-detection/</loc>
+         <lastmod>2024-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kenn0727.github.io/ee-microsims/sims/Mobius-Transform/</loc>
-         <lastmod>2024-02-22</lastmod>
+         <loc>https://kenn0727.github.io/ee-microsims/sims/lc-oscillator/</loc>
+         <lastmod>2024-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kenn0727.github.io/ee-microsims/sims/RC_Lowpass_filter/</loc>
-         <lastmod>2024-02-22</lastmod>
+         <loc>https://kenn0727.github.io/ee-microsims/sims/linear-algebra-sim/</loc>
+         <lastmod>2024-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kenn0727.github.io/ee-microsims/sims/mobius-transform/</loc>
+         <lastmod>2024-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kenn0727.github.io/ee-microsims/sims/mosfet-biasing/</loc>
+         <lastmod>2024-03-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kenn0727.github.io/ee-microsims/sims/rc-lowpass-filter/</loc>
+         <lastmod>2024-03-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
