@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buck Converter Visualization</title>
+    <link rel="stylesheet" href="buck-converter.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="buck-converter.js"></script>
+</head>
+<body>
+    <h1>Buck Converter</h1>
+    <div class="content-container">
+        <div class="form-container">
+            <img src="https://www.researchgate.net/profile/Sree_Renga_Raja_Thangaswamy/publication/264027444/figure/fig2/AS:296466770874368@1447694594122/Schematic-diagram-of-Buck-converter.png" alt="Buck Converter Diagram" id="buckConverterImage">
+            <br>
+            <form id="inputForm">
+                <div class="overlayInput" style="top: 90%; left: 5%;">
+                    Frequency: 
+                    <input type="number" id="frequencyValue" name="frequency" step="any" required>
+                    <select id="frequencySuffix" name="frequencySuffix">
+                        <option value="1">Hz</option>
+                        <option value="1e3">kHz</option>
+                        <option value="1e6">MHz</option>
+                    </select>
+                </div>        
+                <div class="overlayInput" style="top: 40%; left: 20%;">
+                    Duty Cycle: 
+                    <input type="range" id="dutyCycle" name="dutyCycle" min="0" max="1" step="0.01" value="0" oninput="dutyCycleValue.value = dutyCycle.valueAsNumber.toFixed(2)">
+                    <output id="dutyCycleValue">0</output>
+                </div>        
+                <div class="overlayInput" style="top: 20%; left: 5%;">
+                    Resistance: 
+                    <input type="number" id="resistorValue" name="resistor" required>
+                    <select id="resistorSuffix" name="resistorSuffix">
+                        <option value="1">Ω</option>
+                        <option value="1000">kΩ</option>
+                        <option value="1000000">MΩ</option>
+                    </select>
+                </div>
+                <div class="overlayInput" style="top: 60%; left: 35%;">
+                    Inductance: 
+                    <input type="number" id="inductorValue" name="inductor" step="any" required>
+                    <select id="inductorSuffix" name="inductorSuffix">
+                        <option value="1">H</option>
+                        <option value="0.001">mH</option>
+                        <option value="1e-6">μH</option>
+                        <option value="1e-9">nH</option>
+                    </select>
+                </div>
+                <div class="overlayInput" style="top: 80%; left: 50%;">
+                    Capacitance: 
+                    <input type="number" id="capacitorValue" name="capacitor" step="any">
+                    <select id="capacitorSuffix" name="capacitorSuffix">
+                        <option value="1">F</option>
+                        <option value="1e-6">μF</option>
+                        <option value="1e-9">nF</option>
+                        <option value="1e-12">pF</option>
+                    </select>
+                </div>
+                <label for="inputVoltage">Input Voltage (V):</label>
+                <input type="number" id="inputVoltage" name="inputVoltage" required><br>
+                <button type="button" id="submit" onclick="submitValues()">Submit</button>
+            </form>
+        </div>
+        <div class="chart-container">
+            <canvas id="outputVoltageChart"></canvas>
+            <p class="hidden">Output Voltage is found by multiplying the Duty Cycle and the Input Voltage</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="switchVoltageChart"></canvas>
+            <p class="hidden">The Switch Voltage is 0 when the switch is on and is equivalent to the Input Voltage when the switch is off.</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="inductorVoltageChart"></canvas>
+            <p class="hidden">Inductor Voltage follows KVL: It is always the Diode Voltage minus the Output Voltage.</p>
+            <p class="hidden-dcm" id="dcm">Because the Inductor Current has reached zero in DCM, the inductor voltage will also remain zero because there is no change in current during this time (V=Ldi/dt).</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="inductorCurrentChart"></canvas>
+            <p class="hidden">Inductor Current is derived by taking the integral of the Inductor Voltage graph and dividing by the inductance of the inductor.</p>
+            <p class="hidden-dcm" id="dcm">You have reached DCM (discontinuous conduction mode). When the inductor discharges, its current falls. However, the inductor cannot push current backwards because the diode will become reverse-biased and block the inductor's current. Therefore, if the inductor current reaches zero when discharging, it will remain at zero for the rest of the switching period until the switch is turned on again.</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="diodeVoltageChart"></canvas>
+            <p class="hidden">Diode Voltage follows KVL: it is the Input Voltage minus the Switch Voltage.</p>
+            <p class="hidden-dcm" id="dcm">Diode Voltage is also the sum of the Inductor Voltage and the Output Voltage. During DCM, when the Inductor Voltage is zero, the Diode Voltage will equal the Output Voltage</p>
+        </div>
+        <br>
+        <div class="chart-container">
+            <canvas id="inputCurrentChart"></canvas>
+            <p class="hidden">Input Current is equivalent to the Inductor Current when the switch is on.</p>
+            <p class="hidden">The diode blocks current when the switch is on so all input current must go into the inductor. When the switch is off, the Input Current is zero.</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="capacitorCurrentChart"></canvas>
+            <p class="hidden">Capacitor Current can be found by KCL. It is always Inductor Current minus Output Current.</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="capacitorVoltageChart"></canvas>
+            <p class="hidden">Capacitor Voltage is derived by taking the integral of the Capacitor Current graph and dividing by the capacitance of the capacitor.</p>
+        </div>
+    </div>
+    <div class="explanation-container">
+        <h2>How Does a Buck Converter Work?</h2>
+        <p>A buck converter is a type of DC-DC converter that steps down voltage from its input (supply) to its output (load). It is a power converter that efficiently converts a higher voltage to a lower voltage without the need for a transformer. The basic operation of a buck converter involves two main states:</p>
+        <ul>
+            <li><strong>On State:</strong> When the switch (typically a MOSFET) is closed, current flows through the inductor, storing energy in its magnetic field. The diode is reverse-biased and blocks current.</li>
+            <li><strong>Off State:</strong> When the switch is open, the inductor's magnetic field collapses, which forces current through the diode to the output. This maintains the flow of current to the load during the off cycle.</li>
+        </ul>
+        <p>The output voltage is determined by the duty cycle of the switch's operation, which is the ratio of the on-time to the total cycle time. A higher duty cycle means a higher output voltage relative to the input, and vice versa. By adjusting this duty cycle, the buck converter can maintain a stable output voltage despite variations in input voltage or load conditions.</p>
+        <p>Buck converters are widely used in power supplies for computers, consumer electronics, and energy systems due to their efficiency and simplicity.</p>
+
+        <p>Aside: Discontinuous Conduction Mode is reached when the load resistance is greater than what the converter can handle under normal, continuous conduction mode (CCM). The converter's maximum CCM load, the critical resistance, can be found by using this formula:</p>
+        <p>\( R_{\text{critical}} = \frac{2 \times \text{L} \times \text{f}_{\text{sw}}}{1 - \text{d}} \)</p>
+        <p id='rcrit'>In this case, your critical resistance value would be: </p>
+    </div>
+</body>
+</html>
