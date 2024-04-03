@@ -16,15 +16,19 @@ def process_sim(directory, thumbnails_dir, gallery_lines):
                     break
 
     # Find the first image (simID.png)
-    image_file = os.path.join(directory, f'{simID}.png')
-    if not os.path.exists(image_file):
+    img_files = [file for file in os.listdir(directory) if ".png" in file]
+    if len(img_files) == 0:
         print(f"No image found for {simID}, skipping. To fix, create image /doc/sims/thumbnails/{simID}.png")
         return
-
-    # Create a thumbnail
+    
+    img_file = img_files[0]
     thumbnail_path = os.path.join(thumbnails_dir, f'{simID}.png')
-    with Image.open(image_file) as img:
-        img.thumbnail((128, 128))
+    image_path = os.path.join(directory, f'{simID}.png')
+    if simID+".png" != img_file:
+        os.rename(directory+"/"+img_file,image_path)
+        
+    with Image.open(image_path) as img:
+        img.thumbnail((128,128))
         img.save(thumbnail_path)
 
     # Add entry to the gallery lines

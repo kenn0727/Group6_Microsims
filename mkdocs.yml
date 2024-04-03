@@ -16,6 +16,7 @@ nav:
     - RC Lowpass Filter: sims/rc-lowpass-filter/index.md
     - Analog Mod: sims/analog-mod/index.md
     - Mosfet Biasing: sims/mosfet-biasing/index.md
+    - Buck Converter: sims/buck-converter/index.md
   - License: license.md
 
 edit_uri: 'blob/master/docs'
