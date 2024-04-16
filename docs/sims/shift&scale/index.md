@@ -15,8 +15,8 @@ Signal time shifting and scaling are key operations in signal processing:
 Time shifting affects when a signal occurs, while time scaling alters how quickly it happens, impacting its frequency characteristics.
 
 <figure markdown>
-   ![](./SS.png){ width="400" }
-   <figcaption>Analog Modulation Sim</figcaption>
+   ![](./shift&scale.png){ width="400" }
+   <figcaption>Shift & Scale Sim</figcaption>
 </figure>
 
 <form action="shiftscale.html" style="text-align:center;">

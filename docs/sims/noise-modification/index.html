@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Transmission Simulation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="simulation-container">
+        <canvas id="signal-canvas" width="1600" height="800"></canvas>
+
+        <div id="controls">
+            <label for="bit-rate">Bit Rate:</label>
+            <input type="range" id="bit-rate" min="1" max="100" value="50">
+          <label for="noise-intensity">Noise Intensity:</label>
+<input type="range" id="noise-intensity" min="0" max="1" step="0.01" value="0.5">
+
+        </div>
+    </div>
+  
+  <div id="explanations">
+    <h3>What is Bitrate?</h3>
+    <p>Bitrate is the number of bits that are conveyed or processed per unit of time. In this simulation, adjusting the bitrate changes how quickly the signal transitions between its high and low states. A higher bitrate means more bits are transmitted per second, leading to faster transitions in the signal.</p>
+    
+    <h3>Impact of Noise on the Signal</h3>
+    <p>Noise refers to any unwanted modification that a signal may undergo during transmission or processing. It can distort the information carried by the signal, making it harder to interpret accurately. In this simulation, noise is visualized as random fluctuations in the signal, demonstrating how external interference can affect digital communication.</p>
+</div>
+
+  <script src="noise.js"></script>
+  <script src="signal.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
