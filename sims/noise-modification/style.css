@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#simulation-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#signal-canvas {
+    width: 100%; /* Adjust if you want to scale the canvas to fit a specific area */
+    height: auto; /* Maintain aspect ratio */
+    background-color: #f0f0f0;
+}
+
+
+#controls {
+    text-align: center;
+}
+
+#explanations {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+#explanations h3 {
+    margin-top: 0;
+}
+
+#explanations p {
+    font-size: 14px;
+    line-height: 1.6;
+}
